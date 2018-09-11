@@ -1,5 +1,6 @@
 //import keyword for importing modules.
 import { Component } from '@angular/core';
+//We first import the Goal class.
 import {Goal} from './goal'
 
 
@@ -15,9 +16,12 @@ import {Goal} from './goal'
 })
   //We export the class so that we can import it anywhere we need it in the application.
 export class AppComponent {
-    goals: string[];
-
-  constructor(){
-    this.goals = ["Watch Finding Nemo", "Buy Cookies","Get new phonecase"];
-  }
+    goals = [
+        new Goal(1,'Watch Finding Nemo'),
+        new Goal(2,'Buy Cookies'),
+        new Goal(3,'Get new Phone Case'),
+        new Goal(4,'Get Dog Food'),
+        new Goal(5,'Solve math homework'),
+        new Goal(6,'Plot my world domination plan'),
+    ]
 }
