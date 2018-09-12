@@ -17,11 +17,11 @@ import {Goal} from './goal'
   //We export the class so that we can import it anywhere we need it in the application.
 export class AppComponent {
     goals = [
-        new Goal(1,'Watch Finding Nemo'),
-        new Goal(2,'Buy Cookies'),
-        new Goal(3,'Get new Phone Case'),
-        new Goal(4,'Get Dog Food'),
-        new Goal(5,'Solve math homework'),
-        new Goal(6,'Plot my world domination plan'),
+        new Goal(1,'Watch Finding Nemo','In the house'),
+      new Goal(2, 'Buy Cookies', 'Cause im hungry'),
+      new Goal(3, 'Get new Phone Case', 'to keep my phone safe'),
+      new Goal(4, 'Get Dog Food', 'Cause it must be hungry'),
+      new Goal(5, 'Solve math homework', 'oohhh noooo!'),
+      new Goal(6, 'Plot my world domination plan', 'hhuuuh?'),
     ]
 }

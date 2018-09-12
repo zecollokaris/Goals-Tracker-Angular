@@ -17,6 +17,9 @@ export class GoalComponent implements OnInit {
       new Goal(6, 'Plot my world domination plan','Cause I am an evil oerlord'),
     ]
  
+    toogleDetails(index){
+        this.goals[index].showDescription=!this.goals[index].showDescription;
+    }
   constructor() { }
  
   ngOnInit() {

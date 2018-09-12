@@ -1,5 +1,13 @@
 h1 {
   color: #369;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Alfa Slab One', cursive;
   font-size: 250%;
 }
+
+ul {
+    font-family: 'Ruda', sans-serif;
+} 
+
+p {
+    font-family: 'Ruda', sans-serif;
+} 
