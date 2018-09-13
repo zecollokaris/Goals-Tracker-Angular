@@ -25,13 +25,6 @@ export class GoalComponent implements OnInit {
     
     
 
-    completeGoal(isComplete,index){
-        if (isComplete){
-            this.goals.splice(index,1);
-        }
-        }
-    
-        
     deleteGoal(isComplete, index) {
         if (isComplete) {
             let toDelete = confirm(`Are you sure you want to delete ${this.goals[index].name}`)
