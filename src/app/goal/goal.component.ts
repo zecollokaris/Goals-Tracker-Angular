@@ -16,16 +16,31 @@ export class GoalComponent implements OnInit {
         new Goal(5, 'Solve math homework', 'Damn Math', new Date(2018, 2, 14)),
         new Goal(6, 'Plot my world domination plan', 'Cause I am an evil oerlord', new Date(2018, 3, 14)),
     ]
+
+
  
     toogleDetails(index){
         this.goals[index].showDescription=!this.goals[index].showDescription;
     }
     
+    
+
     completeGoal(isComplete,index){
         if (isComplete){
             this.goals.splice(index,1);
         }
         }
+    
+        
+    deleteGoal(isComplete, index) {
+        if (isComplete) {
+            let toDelete = confirm(`Are you sure you want to delete ${this.goals[index].name}`)
+
+            if (toDelete) {
+                this.goals.splice(index, 1)
+            }
+        }
+    }
 
   constructor() { }
  
