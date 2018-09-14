@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GoalFormComponent implements OnInit {
 
-    newGoal=new Goal(0,"","")
+    newGoal=new Goal(0,"","",new Date());
 
   constructor() { }
 
