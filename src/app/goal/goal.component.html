@@ -2,7 +2,8 @@
 <hr>
 
 <div class="container">
-    <app-goal-form></app-goal-form>
+    <app-goal-form (addGoal)="addNewGoal($event)"></app-goal-form>
+    
     <div *ngFor='let goal of goals;let i = index'>
       
       <h5 id="{{i}}" appStrikethrough>{{goal.name}} due on {{goal.completeDate|date|uppercase}}</h5>
