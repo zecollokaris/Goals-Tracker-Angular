@@ -1,3 +1,4 @@
+import {Goal} from '../goal';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./goal-form.component.css']
 })
 export class GoalFormComponent implements OnInit {
+
+    newGoal=new Goal(0,"","")
 
   constructor() { }
 
