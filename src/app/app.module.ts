@@ -10,6 +10,10 @@ import { GoalFormComponent } from './goal-form/goal-form.component';
 import {AlertsService} from './alert-service/alerts.service'
 import { HttpClientModule } from '@angular/common/http';
 
+
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpModule } from '@ngx-progressbar/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,10 +23,14 @@ import { HttpClientModule } from '@angular/common/http';
     DateCountPipe,
     GoalFormComponent
   ],
+
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
+    NgProgressModule.forRoot(),// normal progress bar
+    NgProgressHttpModule // progress bar to load http requests
   ],
   providers: [AlertsService], // Add service to providers
   bootstrap: [AppComponent]

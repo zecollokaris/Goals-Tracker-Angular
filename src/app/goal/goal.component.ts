@@ -67,4 +67,3 @@ export class GoalComponent implements OnInit {
     }
 
 }
- 
