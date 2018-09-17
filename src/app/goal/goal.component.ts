@@ -3,6 +3,8 @@ import {Goal} from '../goal'
 import {Goals} from '../goals'
 import { GoalService } from '../goals/goal.service';
 import { AlertsService } from '../alert-service/alerts.service'
+import { HttpClient } from '@angular/common/http'
+import { Quote } from '../quote-class/quote'
 
 @Component({
   selector: 'app-goal',
@@ -14,7 +16,7 @@ export class GoalComponent implements OnInit {
 
     goals:Goal[];
 
-
+    quote:Quote;
 
     toogleDetails(index){
         this.goals[index].showDescription=!this.goals[index].showDescription;
@@ -42,15 +44,27 @@ export class GoalComponent implements OnInit {
         this.goals.push(goal)
     }
 
-    constructor(goalService: GoalService, alertService: AlertsService) {
+    constructor(goalService:GoalService,alertService: AlertsService,private http:HttpClient) {
     this.goals = goalService.getGoals();
     this.alertService = alertService;//make the service available to the class.
 
     }
  
     ngOnInit() {
-    }
- 
-}
 
+        interface ApiResponse {
+            quote: string;
+            author: string
+        }
+
+        this.http.get<ApiResponse>("https://talaikis.com/api/quotes/random/").subscribe(data=>{
+            this.quote= new Quote(data.quote,data.author)
+            // Successful API request.
+        }, err => {
+            this.quote = new Quote("Never, never, never give up.", "winston churchill")
+            console.log("Error occured ")
+        })
+    }
+
+}
  
