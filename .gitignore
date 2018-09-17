@@ -1,9 +1,10 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# See http://help.gapiUrl:"https://talaikis.com/api/quotes/random/"ithub.com/ignore-files/ for more about ignoring files.
 
 # compiled output
 /dist
 /tmp
 /out-tsc
+environment.ts
 
 # dependencies
 /node_modules

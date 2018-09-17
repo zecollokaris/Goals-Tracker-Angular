@@ -5,15 +5,16 @@ import { GoalService } from '../goals/goal.service';
 import { AlertsService } from '../alert-service/alerts.service'
 import { HttpClient } from '@angular/common/http'
 import { Quote } from '../quote-class/quote'
+import { QuoteRequestService } from '../quote-http/quote-request.service'
 
 @Component({
   selector: 'app-goal',
   templateUrl: './goal.component.html',
-  providers: [GoalService], //add the providers to the component
+  providers: [GoalService,QuoteRequestService], //add the providers to the component
   styleUrls: ['./goal.component.css']
 })
 export class GoalComponent implements OnInit {
-
+    http:HttpClient;
     goals:Goal[];
 
     quote:Quote;
@@ -44,10 +45,11 @@ export class GoalComponent implements OnInit {
         this.goals.push(goal)
     }
 
-    constructor(goalService:GoalService,alertService: AlertsService,private http:HttpClient) {
+    constructor(goalService: GoalService, alertService: AlertsService, private quoteService: QuoteRequestService,http:HttpClient) {
     this.goals = goalService.getGoals();
     this.alertService = alertService;//make the service available to the class.
-
+    this.quote=new Quote("","");
+    this.http=http;
     }
  
     ngOnInit() {
