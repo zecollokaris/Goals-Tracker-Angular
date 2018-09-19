@@ -1,6 +1,10 @@
-# Goals
+# GOALS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
+This project was generated with [Angular CLI(https://github.com/angular/angular-cli) version 6.2.1.
+
+# DESCRIPTION
+
+This is a simple application that allows you to add goals for you to keep on constantly seeing them.
 
 ## Development server
 
