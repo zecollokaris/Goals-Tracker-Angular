@@ -14,6 +14,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpModule } from '@ngx-progressbar/http';
 import { AboutComponent } from './about/about.component';
+import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
+
+
+const routes: Routes = [
+  { path: "goals", component: GoalComponent },
+  { path: "about", component: AboutComponent },
+  {path:"",redirectTo:"/goals",pathMatch:"full"},
+  { path: '**', component: NotFoundComponent }
+]
+
 
 @NgModule({
   declarations: [
@@ -23,7 +34,8 @@ import { AboutComponent } from './about/about.component';
     StrikethroughDirective,
     DateCountPipe,
     GoalFormComponent,
-    AboutComponent
+    AboutComponent,
+    NotFoundComponent
   ],
 
   imports: [
@@ -32,7 +44,8 @@ import { AboutComponent } from './about/about.component';
     HttpClientModule,
     
     NgProgressModule.forRoot(),// normal progress bar
-    NgProgressHttpModule // progress bar to load http requests
+    NgProgressHttpModule, // progress bar to load http requests
+    RouterModule.forRoot(routes)
   ],
   providers: [AlertsService], // Add service to providers
   bootstrap: [AppComponent]
