@@ -1,7 +1,6 @@
 # See http://help.gapiUrl:"https://talaikis.com/api/quotes/random/"ithub.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
 /tmp
 /out-tsc
 environment.ts
