@@ -23,3 +23,10 @@ This is a simple application using Angular framework that allows you to add goal
 2. Type Script
 
 3. Javascript
+
+## License
+---
+
+The app is licensed by MIT.
+
+MIT (c) 2018
