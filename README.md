@@ -16,13 +16,17 @@ This is a simple application using Angular framework that allows you to add goal
 
 - Users can see days left to complete goal.
 
+- User can view Quotes generated using a Quotes API
+
 # TECHNOLOGIES USED
 
 1. Angular version 6 (Framework)
 
 2. Type Script
 
-3. Javascript
+3. [Quotes API](https://talaikis.com/random_quotes_api/)
+
+4. Javascript
 
 ## License
 ---
