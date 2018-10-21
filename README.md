@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI(https://github.com/angular/angular-cli) version 6.2.1.
 
+# DISPLAY
+
+![](spec.md/goal.png)
+
+![](spec.md/goal2.png)
+
+![](spec.md/goal4.png)
+
+![](spec.md/goal3.png)
+
 # DESCRIPTION
 
 This is a simple application using Angular framework that allows you to add goals for you to keep on constantly seeing them.
