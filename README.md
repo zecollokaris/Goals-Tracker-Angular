@@ -27,6 +27,6 @@ This is a simple application using Angular framework that allows you to add goal
 ## License
 ---
 
-The app is licensed by MIT.
+The app is licensed by MIT. [**HERE**](LICENSE)
 
 MIT (c) 2018
